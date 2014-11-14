@@ -79,7 +79,7 @@
 				<div class="error" ng-show="formValidation">{{getError(contactInfoForm.gender.$error)}}</div>
 				<div class="form-group">
 					<label>Summary</label>
-					<textarea class="form-control" name="textarea" rows="12"></textarea>
+					<textarea class="form-control" name="textarea" rows="12" ng-model="user.summary"></textarea>
 				</div>
 				<div class="form-group">
 					<label>Mobile</label>
