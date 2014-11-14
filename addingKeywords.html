@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="addingKeywords">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Adding Keywords</title>
+
+	<!-- style -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="js/addingKeywords.js"></script>
+</head>
+<body>
+	<section class="container" ng-controller="keywordsCtrl">
+		<div class="row">
+			<div class="col-lg-12 clearfix">
+				<h3 class="title">Keywords</h3>
+				<hr class="title-bar" />
+			</div>
+			<div class="col-lg-6 clearfix">
+				<h4 class="sub-title">What I provide</h4>
+				<div class="keyword-container clearfix">
+					<ul class="keyword-list" ng-repeat="item in whatProvidedContainer track by $index">
+						<li class="keyword keyword-provide">{{item}}&nbsp;<i class="fa fa-times" ng-click="removeItem($index, 'whatProvided')"></i></li>
+					</ul>
+				</div>
+				<form name="keywordForm1" novalidate ng-submit="addItem(whatProvidedItem, 'whatProvided')">
+					<div class="form-group clearfix">
+						<input name="whatProvidedItem" type="text" class="form-control input-text" ng-model="whatProvidedItem" placeholder="Add Keyword" required />
+						<button class="btn btn-primary btn-add" ng-disabled="keywordForm1.$invalid">Add</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-lg-6 clearfix">
+				<h4 class="sub-title">What I'm Looking for</h4>
+				<div class="keyword-container clearfix">
+					<ul class="keyword-list" ng-repeat="item in whatLookingContainer track by $index">
+						<li class="keyword keyword-looking" >{{item}}&nbsp;<i class="fa fa-times" ng-click="removeItem($index, 'whatLooking')"></i></span></li>
+					</ul>
+				</div>
+				
+				<form name="keywordForm2" nobalidate ng-submit="addItem(whatLookingItem, 'whatLooking')">
+					<div class="form-group clearfix">
+						<input name="whatLookingItem" type="text" class="form-control input-text" ng-model="whatLookingItem" placeholder="Add Keyword"  required />
+						<button class="btn btn-primary btn-add" ng-disabled="keywordForm2.$invalid">Add</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	<section>
+</body>
+</html>

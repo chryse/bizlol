@@ -1,0 +1,131 @@
+/* custom style based on Bootstrap 3.2.0 */
+
+body {
+	color: #666;
+}
+
+.title {
+	color: #333;
+	text-transform: uppercase;
+}
+
+.title-bar {
+	margin: 5px 0;
+	border-top: 1px solid #aaaaaa;
+}
+
+.sub-title {
+	margin: 30px 0 10px 0;
+}
+
+.keyword-container {
+	margin: 10px 0;
+}
+
+.keyword-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.keyword {
+	float: left;
+	color: #ffffff;
+	line-height: 20px;
+	padding: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+.keyword-provide {
+	background-color: #7f3f98;
+}
+
+.keyword-looking {
+	background-color: #643d33;
+}
+
+.input-text {
+	float: left;
+	width: 60%;
+	margin-right: 20px;
+}
+
+.btn-add {
+	float: left;
+	width: 150px;
+}
+
+.btn-primary, .btn-primary.disabled, .btn-primary[disabled], .btn-primary.disabled:hover, .btn-primary[disabled]:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active,
+.btn-primary.disabled.active, .btn-primary[disabled].active {
+	background-color: #7f3f98;
+	border-color: #623175;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+	background-color: #5c2e6f;
+	border-color: #452354;
+}
+
+.form-control:focus, .form-control:active {
+	border-color: #7f3f98;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 126, 233, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 126, 233, 0.6);
+	-o-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 126, 233, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 126, 233, 0.6);
+}
+
+
+/* contact Information style */
+form.contact .ng-invalid.ng-dirty { background-color: lightpink; }
+form.contact .ng-valid.ng-dirty { background-color: lightgreen; }
+.error {
+	color: red;
+	font-weight: bold;
+	margin: 5px;
+}
+.required { color: red; }
+.col1 { display: block; width: 50%; float: left; padding: 0 30px;}
+.submit-btn { padding: 0 30px;}
+.label-date {
+	display: block;
+}
+select.form-control {
+	display: block;
+	float: left;
+	width: 30%;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.radio-box {
+	height: 34px;
+	margin-bottom: 0px;
+}
+
+.radio-box label {
+	font-size: 14px;
+	color: #555;
+	font-weight: normal;
+	margin: 5px 20px 15px 0px;
+}
+.radio-box input {
+	margin-right: 5px;
+}
+
+.close-box {
+	position: absolute;
+	right: 10px;
+	bottom: -12px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #afaaaa;
+	color: #fff;
+	text-align: center;
+}
+.close-box:active, .close-box:hover {
+	background-color: #858282;
+}

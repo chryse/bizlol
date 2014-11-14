@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="contactInfo">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Contact Info</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- style -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="js/contactInfo.js"></script>
+</head>
+
+<body ng-controller="contactCtrl">
+<header class="container" style="position: relative">
+	<h4 class="title">Basic Information</h4>
+	<div class="close-box" ng-click="closeWindow()"><i class="fa fa-times"></i></div>
+</header>
+<section class="container">
+
+	<form name="contactInfoForm" class="contact" novalidate ng-submit="saveUser(user)">
+		<div class="well">
+			<div class="col1">
+				<div class="form-group">
+					<label>Work Email <span class="required">*</span></label>
+					<input name="workEmail" type="email" class="form-control" ng-model="user.workEmail" required />
+					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.workEmail.$error)}}</div>
+				</div>
+				<div class="form-group">
+					<label>Personal Email <span class="required">*</span></label>
+					<input name="personalEmail" type="email" class="form-control" ng-model="user.personalEmail" required />
+					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.personalEmail.$error)}}</div>
+				</div>
+				<div class="form-group">
+					<label>Job Title <span class="required">*</span></label>
+					<input name="jobTitle" type="text" class="form-control" ng-model="user.jobTitle" required />
+					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.jobTitle.$error)}}</div>
+				</div>
+				<div class="form-group">
+					<label>Name <span class="required">*</span></label>
+					<input name="name" type="text" class="form-control" ng-model="user.name" required />
+					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.name.$error)}}</div>
+				</div>
+				<div class="form-group">
+					<label class="label-date">Date of Birth</label>
+					<select class="form-control" ng-model="user.birthMonth" ng-options="month for month in months">
+						<option value="">Month</option>
+					</select>
+					<select class="form-control" ng-model="user.birthDay" ng-options="day for day in days">
+						<option value="">Day</option>
+					</select>
+					<select class="form-control" ng-model="user.birthYear" ng-options="year for year in years">
+						<option value="">Year</option>
+					</select>
+				</div>
+				<div class="clearfix"></div>
+				<div class="form-group">
+					<label>Phone</label>
+					<input name="phone" type="text" class="form-control" ng-model="user.phone" />
+				</div>
+			</div>
+			<div class="col1">
+				<label>Gender <span class="required">*</span></label>
+				<div class="radio-box">
+					<label>
+						<input class="" name="gender" type="radio" value="male" class="" ng-model="user.gender" required /> Male
+					</label>
+					<label>
+						<input class="" name="gender" type="radio" value="female" class="" ng-model="user.gender" required /> Female
+					</label>
+				</div>
+				<div class="error" ng-show="formValidation">{{getError(contactInfoForm.gender.$error)}}</div>
+				<div class="form-group">
+					<label>Summary</label>
+					<textarea class="form-control" name="textarea" rows="12"></textarea>
+				</div>
+				<div class="form-group">
+					<label>Mobile</label>
+					<input name="mobile" type="text" class="form-control" ng-model="user.mobile" />
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="submit-btn text-right">
+				<button class="btn btn-default" ng-click="removeInfo(user)" >Cancel</button>
+				<button type="submit" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</form>
+</section>
+</body>
+</html>
