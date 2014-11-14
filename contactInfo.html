@@ -30,22 +30,22 @@
 			<div class="col1">
 				<div class="form-group">
 					<label>Work Email <span class="required">*</span></label>
-					<input name="workEmail" type="email" class="form-control" ng-model="user.workEmail" required />
+					<input name="workEmail" type="email" class="form-control" ng-model="user.workEmail" required placeholder="Enter your work email"/>
 					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.workEmail.$error)}}</div>
 				</div>
 				<div class="form-group">
 					<label>Personal Email <span class="required">*</span></label>
-					<input name="personalEmail" type="email" class="form-control" ng-model="user.personalEmail" required />
+					<input name="personalEmail" type="email" class="form-control" ng-model="user.personalEmail" required placeholder="Enter your personal email"/>
 					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.personalEmail.$error)}}</div>
 				</div>
 				<div class="form-group">
 					<label>Job Title <span class="required">*</span></label>
-					<input name="jobTitle" type="text" class="form-control" ng-model="user.jobTitle" required />
+					<input name="jobTitle" type="text" class="form-control" ng-model="user.jobTitle" required placeholder="Enter your job title"/>
 					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.jobTitle.$error)}}</div>
 				</div>
 				<div class="form-group">
 					<label>Name <span class="required">*</span></label>
-					<input name="name" type="text" class="form-control" ng-model="user.name" required />
+					<input name="name" type="text" class="form-control" ng-model="user.name" required placeholder="Enter your name"/>
 					<div class="error" ng-show="formValidation">{{getError(contactInfoForm.name.$error)}}</div>
 				</div>
 				<div class="form-group">
