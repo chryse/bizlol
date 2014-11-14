@@ -10,9 +10,8 @@ angular.module("contactInfo", [])
 	for (var i = 1; i <= 31; i++) {
 		$scope.days.push(i.toString());
 	}
-	for (var i = 1900; i <= 2014; i++) {
+	for (var i = 2014; i >= 1900; i--) {
 		$scope.years.push(i.toString());
-		$scope.years.reverse();
 	}
 
 	$scope.saveUser = function(userDetails) {
