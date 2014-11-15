@@ -24,12 +24,11 @@ angular.module("contactInfo", [])
 		else {
 			$scope.formValidation = true;
 		}
-		
 	};
 
 	$scope.removeInfo = function(userDetails) {
 		for (var key in userDetails) {
-			userDetails[key] = ""
+			delete userDetails[key];
 		}
 	}
 
